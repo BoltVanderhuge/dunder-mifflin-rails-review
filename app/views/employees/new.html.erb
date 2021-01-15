@@ -1,0 +1,17 @@
+<h1>Create a new employee</h1>
+<%=form_for @employee do |employee|%>
+<%=employee.label :first_name, "First Name"%>
+<%=employee.text_field :first_name%>
+<%=employee.label :last_name, "Last Name"%>
+<%=employee.text_field :last_name%>
+<%=employee.label :alias, "Enter Alias"%>
+<%=employee.text_field :alias %>
+<%=employee.label :title, "Enter Title"%>
+<%=employee.text_field :title %>
+<%=employee.label :office, "Which office they work at"%>
+<%=employee.text_field :office %>
+<%=employee.label :img_url, "Their picture html"%>
+<%=employee.text_field :img_url %>
+<%=employee.collection_select(:dog_id, Dog.all, :id, :name)%>
+<%=employee.submit "Add Employee"%>
+<%end%>
